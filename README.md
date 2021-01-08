@@ -19,6 +19,10 @@ Performed checks should at least cover common best practices such as:
  * [Smart Contract Weakness Classification and Test Cases](https://swcregistry.io/)
  * [Smart Contract Best Practices](https://consensys.github.io/smart-contract-best-practices/)
 
+**Major vulnerabilities should be directly communicated with the Badger team instead of being discussed in public. Please follow the responsible disclosure approach.**
+
 ## Scope
+
 Commit: e4a89e5408014db42150d87e7a4718edae88ace4
-https://github.com/Badger-Finance/badger-system
+
+<https://github.com/Badger-Finance/badger-system/>
