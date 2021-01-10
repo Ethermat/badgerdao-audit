@@ -1,6 +1,7 @@
 # Static Code Analysis
 
 ## Preparations
+```
 git clone https://github.com/Badger-Finance/badger-system.git
 
 docker pull trailofbits/eth-security-toolbox
@@ -14,6 +15,7 @@ pip3 install wheel
 
 cd /audit/badger-system
 pip3 install -r requirements.txt
+```
 
 ## Slither
 slither --compile-force-framework brownie .
