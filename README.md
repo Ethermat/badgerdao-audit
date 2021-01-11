@@ -4,7 +4,7 @@ The objective is to bring together NexusMutual community members in order to per
 
 *This repo is used as a MVP to understand if a collaborative audit approach is possible.*
 
-## Methodology
+## Methodology and Summary
 
 The audit should consist of different parts, which can be performed independently and without any specific order:
 
@@ -13,7 +13,7 @@ The audit should consist of different parts, which can be performed independentl
 | Evaluation of 3rd party audits #5  |        |
 | Architecture analysis #6 |   |
 | Software development processes #7 |   |
-| Static code analysis #1 #3 | No high findings confirmed. Outdated and vulnerable compiler version(s) used. |
+| [Static code analysis](static_code_analysis.md) | No high findings confirmed. |
 | Dynamic code analysis #2 |   |
 | Source code review #4 |   |
 

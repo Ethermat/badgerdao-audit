@@ -4,17 +4,23 @@
 ```bash
 git clone https://github.com/Badger-Finance/badger-system.git
 
+# start docker
 docker pull trailofbits/eth-security-toolbox
 docker run -it -v $(pwd):/audit trailofbits/eth-security-toolbox:latest
 
+# install dependencies (os, npm and python)
 sudo apt-get update
-sudo apt-get install python3-pip python3-dev vim git -y
+sudo apt-get install python3-pip python3-dev vim git wget -y
 
 sudo npm install -g ganache-cli
 pip3 install wheel
 
 cd /audit/badger-system
 pip3 install -r requirements.txt
+
+# Install required old solc version (for some contracts)
+sudo wget https://github.com/ethereum/solidity/releases/download/v0.4.24/solc-static-linux -o /usr/bin/solc-v0.4.24
+chmod a+x /usr/bin/solc-v0.4.24
 ```
 
 ## Modules
