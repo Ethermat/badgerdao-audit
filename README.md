@@ -8,12 +8,14 @@ The objective is to bring together NexusMutual community members in order to per
 
 The audit should consist of different parts, which can be performed independently and without any specific order:
 
- * Evaluation of 3rd party audits #5
- * Architecture analysis #6
- * Software development processes #7
- * Static code analysis #1 #3
- * Dynamic code analysis #2
- * Source code review #4
+| Topic        | Results |
+| ------------- |:---------------:|
+| Evaluation of 3rd party audits #5  |        |
+| Architecture analysis #6 |   |
+| Software development processes #7 |   |
+| Static code analysis #1 #3 | No high findings confirmed. Outdated and vulnerable compiler version(s) used. |
+| Dynamic code analysis #2 |   |
+| Source code review #4 |   |
 
 Performed checks should at least cover common best practices such as:
  * [Smart Contract Weakness Classification and Test Cases](https://swcregistry.io/)

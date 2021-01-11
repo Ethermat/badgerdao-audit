@@ -1,7 +1,7 @@
 # Static Code Analysis
 
 ## Preparations
-```
+```bash
 git clone https://github.com/Badger-Finance/badger-system.git
 
 docker pull trailofbits/eth-security-toolbox
@@ -17,22 +17,46 @@ cd /audit/badger-system
 pip3 install -r requirements.txt
 ```
 
-## Slither
-slither --compile-force-framework brownie .
+## Modules
 
-## Visible Functions
-TODO
+ * badger-geyser
+ * badger-hunt
+ * badger-sett
+ * badger-timelock
+ * digg-core
+ * digg-oracles
 
-## Brownie
-TODO Property-based and stateful testing
+Besides that there are various contract-drafts (not covered in this analysis since not production-ready):
+ * BadgerGeyser.sol  
+ * BadgerTree.sol  
+ * BaseStrategy.sol  
+ * BaseStrategyV2.sol  
+ * Farmer.sol  
+ * StrategyDiggLpMetaFarm.sol  
+ * StrategySushiBadgerWbtc.sol
+
+
+## Slither Summary
+
+Due to the project's complexity only high findings are covered and the json output stored in the static_code_analysis folder:
+```bash
+slither contracts/$MODULE --exclude-low --exclude-informational --exclude-medium --exclude-optimization --exclude-dependencies --json $MODULE.json
+```
+
+
+| Module        | Findings (Confirmed/Potential) |
+| ------------- |:---------------:|
+| Badger-Geyser  |  0/10         |
+| Badger-Hunt  |    0/1      |
+| Badger-Sett  |    0/5      |
+| Badger-Timelock  |    0/1      |
+| Digg-Core  |    0/6      |
+| Digg-Oracles (without ConstantOracle) |  0/0        |
+
 
 ## Dependencies
-TODO
-OpenZeppelin/openzeppelin-contracts@3.2.0
+No known vulnerabilities present for contract-dependencies:
 
-## Compiler
-TODO
-solidity ^0.6.0
-solidity ^0.6.2
+ * OpenZeppelin/openzeppelin-contracts@3.2.0
 
-## TODO: Much More
+Different compiler-versions used depending on each module, i.e. solidity 0.4.24, 0.6.0, and 0.6.2.
